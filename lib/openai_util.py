@@ -1,11 +1,9 @@
 import streamlit as st
 import openai
 from time import sleep
-from lib.util import load_creds
 from openai.error import RateLimitError, ServiceUnavailableError
 
-creds = load_creds()
-openai.api_key = creds["openai"]
+openai.api_key = st.secrets["openai_token"]
 
 
 def _get_resp(prompt, max_tokens=500, temperature=0.3):
