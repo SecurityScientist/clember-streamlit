@@ -31,7 +31,7 @@ def str_to_json(text):
         raise ValueError(f"Json could not be loaded. Error: {e}. \nText: {text}")
 
 
-BASE_DIR = "/home/streamlit-apps/data/uploaded_files"
+BASE_DIR = f"{os.getcwd()}/data/uploaded_files"
 files = os.listdir(BASE_DIR)
 files = [f for f in files if ".xlsx" in f]
 
