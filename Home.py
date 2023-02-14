@@ -4,6 +4,6 @@ import streamlit as st
 st.markdown("""
 # Welcome home!
 
-Relax and enjoy
+Use the sidebar to navigate between different functionalities. 
 
 """)
